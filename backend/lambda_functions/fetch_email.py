@@ -24,7 +24,7 @@ def get_credentials():
     return creds
 
 def fetch_emails():
-    """Fetch emails from Gmail API."""
+    """Fetch emails from Gmail API. This is still working on the local machine."""
     creds = get_credentials()
     service = build('gmail', 'v1', credentials=creds)
     results = service.users().messages().list(userId='me', maxResults=5).execute()
